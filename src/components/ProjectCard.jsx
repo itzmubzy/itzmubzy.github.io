@@ -28,10 +28,17 @@ export default function ProjectCard({ project }) {
           <span className="tag" key={skill}>{skill}</span>
         ))}
       </div>
-      <div className="project-card-footer" aria-hidden="true">
-        <span>Case study in progress</span>
-        <ArrowIcon />
-      </div>
+      {project.url ? (
+        <a className="project-card-footer project-card-footer-link" href={project.url} target="_blank" rel="noreferrer">
+          <span>{project.cta || 'View repository'}</span>
+          <ArrowIcon />
+        </a>
+      ) : (
+        <div className="project-card-footer" aria-hidden="true">
+          <span>Case study in progress</span>
+          <ArrowIcon />
+        </div>
+      )}
     </article>
   );
 }
