@@ -55,7 +55,7 @@ The sync settings live in `portfolio.config.json`:
 }
 ```
 
-Add repository names to `exclude` when a public repository should not appear. The three curated projects in the `projects` array remain visible even if GitHub is unavailable, so the page has a reliable fallback. No GitHub token is stored in the frontend.
+The current `exclude` list hides the portfolio repository and profile-config repository from the work grid. Add other repository names there when they should not appear. The three curated projects in the `projects` array remain visible even if GitHub is unavailable, so the page has a reliable fallback. No GitHub token is stored in the frontend.
 
 ## Theme behavior
 
