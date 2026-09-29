@@ -1,6 +1,6 @@
 # Project Memory: KM Mubin Portfolio
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
 
 This file is the single source of truth for any agent continuing this project. Read it before changing code.
 
@@ -41,6 +41,8 @@ Install with `npm install`. Run with `npm run dev`; build with `npm run build`; 
 â”œâ”€â”€ public/CNAME.example           # Reusable custom-domain placeholder
 â”œâ”€â”€ public/KM MUBIN photo.jpeg    # Hero portrait asset
 â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ data/
+â”‚   â”‚   â””â”€â”€ githubRepos.js         # Public GitHub repository adapter and mapper
 â”‚   â”œâ”€â”€ components/
 â”‚   â”‚   â”œâ”€â”€ ProjectCard.jsx       # Reusable config-driven project card
 â”‚   â”‚   â”œâ”€â”€ SectionHeader.jsx      # Shared numbered section heading
@@ -77,6 +79,9 @@ Install with `npm install`. Run with `npm run dev`; build with `npm run build`; 
 - GitHub Actions build and Pages deployment completed successfully for commit `d7ccc96cf6e5b9f99279573c9e4adb6eea86b3cb`.
 - `public/CNAME` added for the chosen custom domain `kmmubin.me`.
 - Namecheap apex DNS verified locally against all four GitHub Pages A records.
+- Professional profile content expanded with AIUB, climate/agriculture, Bengali NLP, data applications, and updated technical skills.
+- Projects section now fetches all eligible public repositories from the `itzmubzy` GitHub account and links each card to its repository.
+- Local JSON projects remain as the fallback when GitHub's public API is unavailable.
 
 ### Pending / recommended next
 
@@ -84,6 +89,7 @@ Install with `npm install`. Run with `npm run dev`; build with `npm run build`; 
 - Enter `kmmubin.me` under GitHub Pages **Custom domain** and enable **Enforce HTTPS** after certificate verification.
 - Add the optional Namecheap `www` CNAME pointing to `itzmubzy.github.io` if the `www` hostname is desired.
 - Replace placeholder project case-study states with live repository/demo URLs when available.
+- Add descriptions, topics, screenshots, and README documentation to GitHub repositories so the automatic cards are more informative.
 - If desired, add a downloadable CV link and project thumbnails under `public/`.
 - Confirm the published site URL after GitHub's Pages/CDN propagation completes.
 - Consider adding automated accessibility checks (for example, Lighthouse or axe) before launch.
@@ -103,6 +109,18 @@ Add an object to the `projects` array with:
 - `accent`: `green`, `blue`, or `orange`
 
 Remove the whole object to remove a project card. The `ProjectCard` component will render the updated array automatically.
+
+### Keep GitHub repositories synchronized
+
+The `github` object in `portfolio.config.json` controls the automatic repository section:
+
+- `username`: GitHub account to read.
+- `enabled`: set to `false` to disable the sync.
+- `includeForks`: include or exclude forked repositories.
+- `includeArchived`: include or exclude archived repositories.
+- `exclude`: repository names that should stay hidden.
+
+The adapter in `src/data/githubRepos.js` fetches all public pages from GitHub, maps repository metadata into the project-card shape, and leaves the curated `projects` array intact. To update a GitHub card, edit the repository's public name, description, language, topics, or README on GitHub.
 
 ### Edit other sections
 
@@ -218,4 +236,11 @@ The UI currently imports `portfolio.config.json` as a local content contract. Pr
 - Added `public/CNAME` with `kmmubin.me`.
 - Documented the Namecheap A records and optional `www` CNAME.
 - Recorded the remaining GitHub Pages settings: Source = GitHub Actions, Custom domain = `kmmubin.me`, then Enforce HTTPS after verification.
+
+### 2026-09-30 - GitHub repository synchronization
+
+- Expanded the public profile copy with AIUB, climate/agriculture, Bengali NLP, data applications, and current technical interests.
+- Added `src/data/githubRepos.js` to fetch and map public GitHub repositories without a frontend token.
+- Added live repository cards and a GitHub profile link to the Projects section.
+- Kept curated JSON projects as a fallback and documented repository filtering in README and this memory file.
 
