@@ -1037,11 +1037,31 @@ button {
   text-transform: uppercase;
 }
 
+.experience-location {
+  margin-left: 10px;
+  color: var(--muted);
+}
+
 .experience-main > p:last-child {
   max-width: 580px;
   margin: 0;
   color: var(--muted);
   font-size: 14px;
+}
+
+.experience-details {
+  display: grid;
+  gap: 7px;
+  max-width: 650px;
+  margin: 16px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.experience-details li::marker {
+  color: var(--ink);
 }
 
 .experience-item > svg {
