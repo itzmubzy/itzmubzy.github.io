@@ -71,6 +71,9 @@ Install with `npm install`. Run with `npm run dev`; build with `npm run build`; 
 - GitHub Pages workflow added.
 - `public/CNAME.example` added as the safe custom-domain placeholder.
 - README added with setup, editing, deploy, domain, and backend-adapter guidance.
+- Public repository created at `https://github.com/itzmubzy/itzmubzy.github.io`.
+- Portfolio source pushed to the `main` branch.
+- GitHub Actions build and Pages deployment completed successfully for commit `d7ccc96cf6e5b9f99279573c9e4adb6eea86b3cb`.
 
 ### Pending / recommended next
 
@@ -78,7 +81,8 @@ Install with `npm install`. Run with `npm run dev`; build with `npm run build`; 
 - Replace placeholder project case-study states with live repository/demo URLs when available.
 - Add a real `public/CNAME` only after choosing the domain.
 - If desired, add a downloadable CV link and project thumbnails under `public/`.
-- Configure a GitHub remote and push the first commit.
+- Confirm the published site URL after GitHub's Pages/CDN propagation completes.
+- Add a real `public/CNAME` and configure DNS after choosing the custom domain.
 - Consider adding automated accessibility checks (for example, Lighthouse or axe) before launch.
 
 ## How to add, edit, or remove content
@@ -195,3 +199,9 @@ The UI currently imports `portfolio.config.json` as a local content contract. Pr
 
 - Excluded the local resume PDF and duplicate root portrait from the Git-tracked deployment payload because the repository is public.
 - Kept the intended hero portrait at `public/KM MUBIN photo.jpeg` for the website.
+
+### 2026-09-29 - GitHub publication
+
+- Created the public repository `itzmubzy/itzmubzy.github.io`.
+- Pushed the portfolio source to `main` without the local resume PDF.
+- Confirmed successful GitHub Actions build and GitHub Pages deployment.
