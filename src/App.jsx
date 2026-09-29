@@ -255,8 +255,16 @@ function App() {
                   <div className="experience-period">{item.period}</div>
                   <div className="experience-main">
                     <h3>{item.role}</h3>
-                    <p className="experience-org">{item.organization}</p>
+                    <p className="experience-org">
+                      {item.organization}
+                      {item.location && <span className="experience-location">{item.location}</span>}
+                    </p>
                     <p>{item.description}</p>
+                    {item.details?.length > 0 && (
+                      <ul className="experience-details">
+                        {item.details.map((detail) => <li key={detail}>{detail}</li>)}
+                      </ul>
+                    )}
                   </div>
                   <ArrowIcon />
                 </article>

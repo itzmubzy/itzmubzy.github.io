@@ -82,6 +82,8 @@ Install with `npm install`. Run with `npm run dev`; build with `npm run build`; 
 - Professional profile content expanded with AIUB, climate/agriculture, Bengali NLP, data applications, and updated technical skills.
 - Projects section now fetches all eligible public repositories from the `itzmubzy` GitHub account and links each card to its repository.
 - Local JSON projects remain as the fallback when GitHub's public API is unavailable.
+- AIESEC experience updated with the current Team Leader - EwA role and completed Exchange Participant Manager role from the supplied profile screenshot.
+- Experience entries now support optional `location` and `details` bullet lists.
 
 ### Pending / recommended next
 
@@ -243,3 +245,9 @@ The UI currently imports `portfolio.config.json` as a local content contract. Pr
 - Added `src/data/githubRepos.js` to fetch and map public GitHub repositories without a frontend token.
 - Added live repository cards and a GitHub profile link to the Projects section.
 - Kept curated JSON projects as a fallback and documented repository filtering in README and this memory file.
+
+### 2026-09-30 - AIESEC experience update
+
+- Added the current Team Leader - EwA role at AIESEC in Bangladesh BD / Dhaka North East.
+- Added the Mar-Sep 2026 Exchange Participant Manager - Outgoing Global Exchange role.
+- Added config-driven responsibility bullets and work-mode labels to the Experience section.
