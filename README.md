@@ -55,7 +55,7 @@ If your personal account is on GitHub Free, use a **public repository** for GitH
 
 Recommended free setup: create a public repository named `itzmubzy.github.io` for the portfolio. Recommended paid/private setup: create a private repository named `itzmubzy.github.io`, then publish its Pages site publicly from the Pages settings.
 
-The workflow defaults to a repository subpath such as `/repository-name/` using the GitHub repository name. For a user site (`username.github.io`) or a custom domain, add a repository Actions variable named `VITE_BASE_PATH` with the value `/`.
+The workflow automatically uses `/` for a user-site repository such as `username.github.io`, and a repository subpath such as `/repository-name/` for ordinary project sites. For a custom domain, add a repository Actions variable named `VITE_BASE_PATH` with the value `/`.
 
 You can also set the base path locally for a repository URL such as `https://username.github.io/repository-name/`:
 

@@ -32,8 +32,17 @@ jobs:
 
       - name: Build
         env:
-          VITE_BASE_PATH: ${{ vars.VITE_BASE_PATH || format('/{0}/', github.event.repository.name) }}
-        run: npm run build
+          VITE_BASE_PATH: ${{ vars.VITE_BASE_PATH }}
+        run: |
+          if [ -z "$VITE_BASE_PATH" ]; then
+            if [[ "${GITHUB_REPOSITORY##*/}" == *.github.io ]]; then
+              VITE_BASE_PATH="/"
+            else
+              VITE_BASE_PATH="/${GITHUB_REPOSITORY##*/}/"
+            fi
+          fi
+          export VITE_BASE_PATH
+          npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
