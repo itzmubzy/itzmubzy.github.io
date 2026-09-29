@@ -9,7 +9,7 @@
     "location": "Dhaka, Bangladesh",
     "availability": "Open to research collaborations & internships",
     "email": "kmmubin1234@gmail.com",
-    "phone": "+880 1322 739367",
+    "phone": "+880 1300728183",
     "socials": [
       {
         "label": "LinkedIn",
@@ -20,6 +20,11 @@
         "label": "GitHub",
         "handle": "@itzmubzy",
         "url": "https://github.com/itzmubzy"
+      },
+      {
+        "label": "WhatsApp",
+        "handle": "+880 1300728183",
+        "url": "https://wa.me/8801300728183"
       }
     ]
   },
@@ -29,7 +34,7 @@
     "enabled": true,
     "includeForks": false,
     "includeArchived": false,
-    "exclude": []
+    "exclude": ["itzmubzy.github.io", "itzmubzy"]
   },
   "navigation": [
     { "label": "About", "href": "#about" },
@@ -47,7 +52,6 @@
       "Outside the notebook, I build data-driven applications, contribute to student communities, and learn by making technical ideas understandable."
     ],
     "stats": [
-      { "value": "3.84", "label": "Current CGPA" },
       { "value": "148", "label": "BSc program credits" },
       { "value": "05", "label": "Research directions" }
     ]
@@ -74,8 +78,8 @@
     {
       "number": "04",
       "title": "Data applications",
-      "description": "Turning analysis into useful interfaces, dashboards, APIs, and visual stories people can explore.",
-      "tags": ["D3.js", "Flask", "Next.js"]
+      "description": "Turning analysis into useful interfaces, production-minded APIs, and visual stories that connect technical work to business value.",
+      "tags": ["D3.js", "Flask", "APIs", "MLOps"]
     }
   ],
   "projects": [
@@ -132,12 +136,20 @@
       "items": ["Pandas", "NumPy", "Scikit-learn", "PyTorch", "TensorFlow", "MLflow"]
     },
     {
+      "title": "Applied ML",
+      "items": ["NLP & LLMs", "Computer vision", "Time-series forecasting", "Geospatial & remote sensing", "Sentinel", "Experiment design"]
+    },
+    {
       "title": "Visualization & data",
       "items": ["Matplotlib", "Seaborn", "D3.js", "Power BI", "Google Earth Engine", "ERA5-Land"]
     },
     {
-      "title": "Web & delivery",
-      "items": ["Next.js", "React", "Tailwind CSS", "Flask", "REST APIs", "Vercel"]
+      "title": "Cloud & delivery",
+      "items": ["REST APIs", "MLOps", "Data pipelines", "AWS SageMaker", "GCP / Azure", "Production deployment"]
+    },
+    {
+      "title": "Leadership & strategy",
+      "items": ["Business value", "Stakeholder management", "Team leadership", "Project management", "English & Bangla", "Collaboration"]
     }
   ],
   "experience": [
