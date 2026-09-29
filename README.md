@@ -49,6 +49,12 @@ The theme toggle is in the header. It stores the preference under `km-mubin-them
 2. In GitHub, open **Settings -> Pages** and set **Source** to **GitHub Actions**.
 3. Push to `main`; [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml) builds and deploys `dist`.
 
+### Repository visibility choice
+
+If your personal account is on GitHub Free, use a **public repository** for GitHub Pages. GitHub Pages from private repositories requires GitHub Pro, Team, or Enterprise. When your plan allows Pages from a private repository, the source code can stay private while the deployed Pages site remains visible to everyone on the internet.
+
+Recommended free setup: create a public repository named `itzmubzy.github.io` for the portfolio. Recommended paid/private setup: create a private repository named `itzmubzy.github.io`, then publish its Pages site publicly from the Pages settings.
+
 The workflow defaults to a repository subpath such as `/repository-name/` using the GitHub repository name. For a user site (`username.github.io`) or a custom domain, add a repository Actions variable named `VITE_BASE_PATH` with the value `/`.
 
 You can also set the base path locally for a repository URL such as `https://username.github.io/repository-name/`:

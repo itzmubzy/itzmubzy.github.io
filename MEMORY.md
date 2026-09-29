@@ -122,6 +122,10 @@ Remove the whole object to remove a project card. The `ProjectCard` component wi
 
 Do not commit a fake domain as `public/CNAME`; keep the `.example` placeholder until the real domain is known.
 
+### Visibility rule
+
+For a personal GitHub Free account, GitHub Pages is available from public repositories. Pages from private repositories requires GitHub Pro, Team, or Enterprise. If private-repository Pages is available, keep the repository private but set the Pages site visibility to public so visitors do not need repository access. The recommended free repository name for this account is `itzmubzy.github.io` with public visibility.
+
 ## How to switch or add a backend later
 
 The UI currently imports `portfolio.config.json` as a local content contract. Preserve its shape when adding a backend.
@@ -181,3 +185,8 @@ The UI currently imports `portfolio.config.json` as a local content contract. Pr
 
 - Updated the GitHub Pages workflow to default to a repository subpath.
 - Documented the `VITE_BASE_PATH=/` Actions variable for user-site and custom-domain deployments.
+
+### 2026-09-29 - GitHub visibility guidance
+
+- Documented the GitHub Free versus Pro/Team/Enterprise Pages limitation.
+- Documented the public-repository recommendation and private-source/public-site option.
