@@ -84,6 +84,10 @@ Install with `npm install`. Run with `npm run dev`; build with `npm run build`; 
 - Local JSON projects remain as the fallback when GitHub's public API is unavailable.
 - AIESEC experience updated with the current Team Leader - EwA role and completed Exchange Participant Manager role from the supplied profile screenshot.
 - Experience entries now support optional `location` and `details` bullet lists.
+- WhatsApp contact updated to `+880 1300728183` and added as a direct WhatsApp link.
+- Removed the CGPA stat from the About section.
+- Excluded `itzmubzy.github.io` and `itzmubzy` from automatic GitHub project cards.
+- Expanded the skills config with applied ML, cloud deployment, MLOps, geospatial/remote sensing, business value, and stakeholder-management skills.
 
 ### Pending / recommended next
 
@@ -251,4 +255,11 @@ The UI currently imports `portfolio.config.json` as a local content contract. Pr
 - Added the current Team Leader - EwA role at AIESEC in Bangladesh BD / Dhaka North East.
 - Added the Mar-Sep 2026 Exchange Participant Manager - Outgoing Global Exchange role.
 - Added config-driven responsibility bullets and work-mode labels to the Experience section.
+
+### 2026-09-30 - Contact, project filters, and skills update
+
+- Replaced the displayed contact number with the supplied WhatsApp number and added a `wa.me` link.
+- Removed the CGPA statistic from the About section.
+- Filtered the portfolio and GitHub profile-config repositories out of the automatic project section.
+- Added requested ML, NLP/LLM, computer vision, time-series, geospatial, cloud, MLOps, leadership, and stakeholder skills.
 
