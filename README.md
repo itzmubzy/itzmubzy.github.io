@@ -34,7 +34,7 @@ All portfolio content lives in [`portfolio.config.json`](./portfolio.config.json
 - focus areas
 - projects and their tags/details
 - skills groups
-- experience entries
+- experience entries, work modes, and responsibility bullets
 - contact and footer copy
 
 The React components render the config data. Content changes should not require component changes.
