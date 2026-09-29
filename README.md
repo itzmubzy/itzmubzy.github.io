@@ -49,13 +49,15 @@ The theme toggle is in the header. It stores the preference under `km-mubin-them
 2. In GitHub, open **Settings -> Pages** and set **Source** to **GitHub Actions**.
 3. Push to `main`; [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml) builds and deploys `dist`.
 
-For a repository URL such as `https://username.github.io/repository-name/`, set the Vite base path in the workflow or build command:
+The workflow defaults to a repository subpath such as `/repository-name/` using the GitHub repository name. For a user site (`username.github.io`) or a custom domain, add a repository Actions variable named `VITE_BASE_PATH` with the value `/`.
+
+You can also set the base path locally for a repository URL such as `https://username.github.io/repository-name/`:
 
 ```bash
 VITE_BASE_PATH=/repository-name/ npm run build
 ```
 
-For a custom domain hosted at the root, keep the default `/` base path.
+For a custom domain hosted at the root, set the repository variable to `/` before deploying.
 
 ## Attach a custom domain
 

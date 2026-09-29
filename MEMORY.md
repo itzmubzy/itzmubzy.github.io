@@ -116,10 +116,9 @@ Remove the whole object to remove a project card. The `ProjectCard` component wi
 1. Create a GitHub repository, commit the project, and push the `main` branch.
 2. In repository settings, set GitHub Pages source to **GitHub Actions**.
 3. The workflow at `.github/workflows/deploy.yml` runs `npm ci`, builds `dist`, and deploys it.
-4. For a project-site URL, build with `VITE_BASE_PATH=/repository-name/ npm run build` or update the workflow with that environment value.
-5. For a custom root domain, keep the base path `/`.
-6. Copy `public/CNAME.example` to `public/CNAME`, replace `yourdomain.com`, commit, and add the same domain in GitHub Pages settings.
-7. Configure the registrar's DNS records as shown by GitHub and wait for HTTPS.
+4. The workflow defaults to `VITE_BASE_PATH=/<repository-name>/` for project sites. For a user site (`username.github.io`) or custom root domain, add a repository Actions variable named `VITE_BASE_PATH` with value `/`.
+5. Copy `public/CNAME.example` to `public/CNAME`, replace `yourdomain.com`, commit, and add the same domain in GitHub Pages settings.
+6. Configure the registrar's DNS records as shown by GitHub and wait for HTTPS.
 
 Do not commit a fake domain as `public/CNAME`; keep the `.example` placeholder until the real domain is known.
 
@@ -177,3 +176,8 @@ The UI currently imports `portfolio.config.json` as a local content contract. Pr
 
 - Inspected the existing portrait asset in the workspace and added a public copy for Vite to serve.
 - Updated the hero visual to use the portrait with a lightweight editorial frame, orbit lines, and initials badge.
+
+### 2026-09-29 - Pages base-path hardening
+
+- Updated the GitHub Pages workflow to default to a repository subpath.
+- Documented the `VITE_BASE_PATH=/` Actions variable for user-site and custom-domain deployments.
