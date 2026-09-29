@@ -38,6 +38,7 @@ Install with `npm install`. Run with `npm run dev`; build with `npm run build`; 
 .
 ├── .github/workflows/deploy.yml  # GitHub Pages build/deploy workflow
 ├── public/CNAME.example          # Placeholder custom-domain file
+├── public/KM MUBIN photo.jpeg    # Hero portrait asset
 ├── src/
 │   ├── components/
 │   │   ├── ProjectCard.jsx       # Reusable config-driven project card
@@ -171,3 +172,8 @@ The UI currently imports `portfolio.config.json` as a local content contract. Pr
 - Installed dependencies and generated a successful Vite production build.
 - Added a small Tailwind utility usage to keep the build's content scan meaningful.
 - Browser preview was attempted, but no browser surface is available in this environment; visual QA remains a recommended local follow-up.
+
+### 2026-09-29 - Hero portrait refinement
+
+- Inspected the existing portrait asset in the workspace and added a public copy for Vite to serve.
+- Updated the hero visual to use the portrait with a lightweight editorial frame, orbit lines, and initials badge.

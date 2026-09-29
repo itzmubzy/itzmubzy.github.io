@@ -96,7 +96,10 @@ function App() {
               <div className="visual-orbit orbit-two" />
               <div className="visual-cross cross-one" />
               <div className="visual-cross cross-two" />
-              <div className="hero-monogram">KM</div>
+              <div className="hero-photo">
+                <img src="/KM%20MUBIN%20photo.jpeg" alt="KM Mubin smiling outdoors" />
+              </div>
+              <div className="hero-monogram" aria-hidden="true">KM</div>
               <div className="hero-data-card hero-data-card-top">
                 <span className="data-label">Currently</span>
                 <strong>{site.availability}</strong>

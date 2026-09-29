@@ -83,6 +83,7 @@ This keeps the rendering layer independent from the eventual source of truth.
 .
 ├── .github/workflows/deploy.yml  # GitHub Pages CI/CD
 ├── public/CNAME.example          # Custom-domain placeholder
+├── public/KM MUBIN photo.jpeg    # Hero portrait asset
 ├── src/
 │   ├── components/
 │   │   ├── ProjectCard.jsx       # Config-driven project card
