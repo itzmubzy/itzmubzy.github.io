@@ -120,7 +120,7 @@ Remove the whole object to remove a project card. The `ProjectCard` component wi
 1. Create a GitHub repository, commit the project, and push the `main` branch.
 2. In repository settings, set GitHub Pages source to **GitHub Actions**.
 3. The workflow at `.github/workflows/deploy.yml` runs `npm ci`, builds `dist`, and deploys it.
-4. The workflow defaults to `VITE_BASE_PATH=/<repository-name>/` for project sites. For a user site (`username.github.io`) or custom root domain, add a repository Actions variable named `VITE_BASE_PATH` with value `/`.
+4. The workflow automatically uses `/` for user-site repositories such as `username.github.io`, and `/<repository-name>/` for ordinary project sites. For a custom root domain, add a repository Actions variable named `VITE_BASE_PATH` with value `/`.
 5. Copy `public/CNAME.example` to `public/CNAME`, replace `yourdomain.com`, commit, and add the same domain in GitHub Pages settings.
 6. Configure the registrar's DNS records as shown by GitHub and wait for HTTPS.
 
@@ -205,4 +205,9 @@ The UI currently imports `portfolio.config.json` as a local content contract. Pr
 - Created the public repository `itzmubzy/itzmubzy.github.io`.
 - Pushed the portfolio source to `main` without the local resume PDF.
 - Confirmed successful GitHub Actions build and GitHub Pages deployment.
+
+### 2026-09-29 - User-site base path fix
+
+- Fixed the Pages workflow so `itzmubzy.github.io` builds with root asset paths (`/`) instead of a project-site subpath.
+- Kept repository subpath behavior for ordinary project-site repositories.
 
