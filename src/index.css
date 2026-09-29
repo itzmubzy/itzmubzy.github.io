@@ -878,6 +878,49 @@ button {
   color: var(--muted);
 }
 
+.project-card-footer-link {
+  transition: color 180ms ease;
+}
+
+.project-card-footer-link:hover,
+.project-card-footer-link:focus-visible {
+  color: var(--ink);
+}
+
+.projects-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: -18px 0 28px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.projects-toolbar .text-link {
+  flex-shrink: 0;
+}
+
+.project-sync-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.project-sync-icon {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
 .skills-layout {
   display: grid;
   grid-template-columns: minmax(220px, 0.65fr) minmax(0, 1.35fr);
@@ -1342,6 +1385,12 @@ button {
 
   .project-card-heading {
     min-height: 140px;
+  }
+
+  .projects-toolbar {
+    display: grid;
+    gap: 14px;
+    margin-top: -10px;
   }
 
   .skills-intro {
