@@ -39,6 +39,24 @@ All portfolio content lives in [`portfolio.config.json`](./portfolio.config.json
 
 The React components render the config data. Content changes should not require component changes.
 
+## Automatic GitHub projects
+
+The Projects section also syncs public repositories from [`github.com/itzmubzy`](https://github.com/itzmubzy) in the browser through GitHub's public API. New public repositories will appear automatically after the site is redeployed or refreshed.
+
+The sync settings live in `portfolio.config.json`:
+
+```json
+"github": {
+  "username": "itzmubzy",
+  "enabled": true,
+  "includeForks": false,
+  "includeArchived": false,
+  "exclude": []
+}
+```
+
+Add repository names to `exclude` when a public repository should not appear. The three curated projects in the `projects` array remain visible even if GitHub is unavailable, so the page has a reliable fallback. No GitHub token is stored in the frontend.
+
 ## Theme behavior
 
 The theme toggle is in the header. It stores the preference under `km-mubin-theme` in `localStorage` and falls back to the user's system preference on first visit. The small inline script in `index.html` prevents a light/dark flash during initial load.
@@ -102,6 +120,8 @@ This keeps the rendering layer independent from the eventual source of truth.
 ├── public/CNAME.example           # Reusable custom-domain placeholder
 ├── public/KM MUBIN photo.jpeg    # Hero portrait asset
 ├── src/
+│   ├── data/
+│   │   └── githubRepos.js         # Public GitHub repository adapter
 │   ├── components/
 │   │   ├── ProjectCard.jsx       # Config-driven project card
 │   │   ├── SectionHeader.jsx      # Shared section heading

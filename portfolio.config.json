@@ -2,12 +2,12 @@
   "site": {
     "name": "KM Mubin",
     "shortName": "Mubin",
-    "role": "Data Science Student",
+    "role": "Data Science Undergraduate",
     "eyebrow": "Portfolio / 2026",
-    "tagline": "Turning messy data into clear, useful decisions.",
-    "summary": "I am a Data Science student who enjoys asking better questions, finding the signal in real-world data, and translating analysis into decisions people can act on.",
+    "tagline": "Building practical models for climate, language, and public-impact questions.",
+    "summary": "I am a Data Science undergraduate at American International University-Bangladesh, exploring machine learning, analytics, climate research, and data-driven applications.",
     "location": "Dhaka, Bangladesh",
-    "availability": "Open to data science internships",
+    "availability": "Open to research collaborations & internships",
     "email": "kmmubin1234@gmail.com",
     "phone": "+880 1322 739367",
     "socials": [
@@ -23,6 +23,14 @@
       }
     ]
   },
+  "github": {
+    "username": "itzmubzy",
+    "profileUrl": "https://github.com/itzmubzy",
+    "enabled": true,
+    "includeForks": false,
+    "includeArchived": false,
+    "exclude": []
+  },
   "navigation": [
     { "label": "About", "href": "#about" },
     { "label": "Work", "href": "#projects" },
@@ -32,42 +40,42 @@
   ],
   "about": {
     "sectionLabel": "01 / About",
-    "title": "Curious by default. Rigorous when it matters.",
+    "title": "Data, models, and questions that matter.",
     "paragraphs": [
-      "I am studying Data Science with a focus on the practical end of the discipline: collecting imperfect data, understanding what it can and cannot say, and turning the result into a clear story.",
-      "My current work sits between exploratory data analysis, statistical reasoning, and beginner-friendly machine learning. I enjoy projects where the dataset is connected to a real question - from crop yield and climate variability to business performance and public awareness.",
-      "Outside the notebook, I like making technical ideas understandable, contributing to student communities, and learning by building in public."
+      "I am studying Data Science at American International University-Bangladesh with a practical focus: collecting imperfect data, understanding what it can and cannot say, and turning the result into a clear story.",
+      "My strongest interests sit at the intersection of machine learning, climate and agricultural analytics, Bengali and multilingual NLP, and data visualization. I enjoy projects where a model is connected to a real question - from rice yield and climate extremes to air quality and public awareness.",
+      "Outside the notebook, I build data-driven applications, contribute to student communities, and learn by making technical ideas understandable."
     ],
     "stats": [
       { "value": "3.84", "label": "Current CGPA" },
-      { "value": "2028", "label": "Expected graduation" },
-      { "value": "03", "label": "Featured projects" }
+      { "value": "148", "label": "BSc program credits" },
+      { "value": "05", "label": "Research directions" }
     ]
   },
   "focusAreas": [
     {
       "number": "01",
-      "title": "Exploratory analysis",
-      "description": "Finding patterns, anomalies, and useful questions before the model enters the room.",
-      "tags": ["Pandas", "EDA", "Data cleaning"]
+      "title": "Climate & agriculture",
+      "description": "Studying how climate variability and extreme events affect agricultural outcomes in Bangladesh.",
+      "tags": ["ERA5-Land", "GEE", "Feature engineering"]
     },
     {
       "number": "02",
-      "title": "Statistical thinking",
-      "description": "Using appropriate tests, assumptions, and visual evidence to make conclusions more trustworthy.",
-      "tags": ["Statistics", "Statsmodels", "Research"]
+      "title": "Machine learning",
+      "description": "Building measurable, explainable workflows for prediction, classification, and real-world decisions.",
+      "tags": ["Scikit-learn", "PyTorch", "Model evaluation"]
     },
     {
       "number": "03",
-      "title": "Predictive modeling",
-      "description": "Building approachable machine learning workflows that are measurable, explainable, and useful.",
-      "tags": ["Scikit-learn", "Feature work", "Evaluation"]
+      "title": "Bengali & multilingual NLP",
+      "description": "Exploring language, code-switching, romanization, and bias across Bengali and English text.",
+      "tags": ["NLP", "Bias research", "Multilingual"]
     },
     {
       "number": "04",
-      "title": "Communicating insight",
-      "description": "Turning technical findings into visuals and language that help a team decide what to do next.",
-      "tags": ["Matplotlib", "Power BI", "Storytelling"]
+      "title": "Data applications",
+      "description": "Turning analysis into useful interfaces, dashboards, APIs, and visual stories people can explore.",
+      "tags": ["D3.js", "Flask", "Next.js"]
     }
   ],
   "projects": [
@@ -117,19 +125,19 @@
   "skills": [
     {
       "title": "Programming",
-      "items": ["Python", "SQL", "C++", "Java", "C#", "R (basic)"]
+      "items": ["Python", "SQL", "C++", "JavaScript", "TypeScript", "R"]
     },
     {
-      "title": "Data science",
-      "items": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn", "Statsmodels"]
+      "title": "Data & ML",
+      "items": ["Pandas", "NumPy", "Scikit-learn", "PyTorch", "TensorFlow", "MLflow"]
     },
     {
-      "title": "Tools",
-      "items": ["Jupyter", "Google Colab", "Excel", "Power BI", "Git", "VS Code", "Kaggle"]
+      "title": "Visualization & data",
+      "items": ["Matplotlib", "Seaborn", "D3.js", "Power BI", "Google Earth Engine", "ERA5-Land"]
     },
     {
-      "title": "Ways of working",
-      "items": ["Data cleaning", "EDA", "Statistical analysis", "Visualization", "Communication", "Collaboration"]
+      "title": "Web & delivery",
+      "items": ["Next.js", "React", "Tailwind CSS", "Flask", "REST APIs", "Vercel"]
     }
   ],
   "experience": [
