@@ -55,7 +55,7 @@ If your personal account is on GitHub Free, use a **public repository** for GitH
 
 Recommended free setup: create a public repository named `itzmubzy.github.io` for the portfolio. Recommended paid/private setup: create a private repository named `itzmubzy.github.io`, then publish its Pages site publicly from the Pages settings.
 
-The workflow automatically uses `/` for a user-site repository such as `username.github.io`, and a repository subpath such as `/repository-name/` for ordinary project sites. For a custom domain, add a repository Actions variable named `VITE_BASE_PATH` with the value `/`.
+The workflow automatically uses `/` for a user-site repository such as `username.github.io`, and a repository subpath such as `/repository-name/` for ordinary project sites. For the configured custom domain `kmmubin.me`, keep the repository Actions variable `VITE_BASE_PATH` set to `/`.
 
 You can also set the base path locally for a repository URL such as `https://username.github.io/repository-name/`:
 
@@ -65,14 +65,22 @@ VITE_BASE_PATH=/repository-name/ npm run build
 
 For a custom domain hosted at the root, set the repository variable to `/` before deploying.
 
-## Attach a custom domain
+## Attach the custom domain
 
-1. Copy [`public/CNAME.example`](./public/CNAME.example) to `public/CNAME`.
-2. Replace `yourdomain.com` with the domain you own.
-3. In your domain registrar, point the apex records to GitHub Pages or add the GitHub Pages CNAME record described in GitHub's Pages settings.
-4. Add the domain in **Settings -> Pages -> Custom domain**, then wait for HTTPS verification.
+The repository is prepared for `kmmubin.me` through [`public/CNAME`](./public/CNAME).
 
-`public/CNAME.example` is intentionally not copied as `CNAME` until a real domain is chosen.
+1. In GitHub, open **Settings -> Pages**, set **Source** to **GitHub Actions**, and enter `kmmubin.me` under **Custom domain**.
+2. In Namecheap DNS, set these apex `A` records:
+   - `@` -> `185.199.108.153`
+   - `@` -> `185.199.109.153`
+   - `@` -> `185.199.110.153`
+   - `@` -> `185.199.111.153`
+3. Optional: add a `CNAME` record for host `www` pointing to `itzmubzy.github.io`.
+4. After DNS and GitHub verification complete, enable **Enforce HTTPS** in the same Pages screen.
+
+The apex DNS records are already resolving to GitHub Pages. The `www` record is optional and still needs to be added if that hostname should work.
+
+[`public/CNAME.example`](./public/CNAME.example) remains as a reusable placeholder for future domains.
 
 ## Add a backend later
 
@@ -90,7 +98,8 @@ This keeps the rendering layer independent from the eventual source of truth.
 ```text
 .
 ├── .github/workflows/deploy.yml  # GitHub Pages CI/CD
-├── public/CNAME.example          # Custom-domain placeholder
+├── public/CNAME                   # Active custom domain: kmmubin.me
+├── public/CNAME.example           # Reusable custom-domain placeholder
 ├── public/KM MUBIN photo.jpeg    # Hero portrait asset
 ├── src/
 │   ├── components/

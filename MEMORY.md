@@ -37,7 +37,8 @@ Install with `npm install`. Run with `npm run dev`; build with `npm run build`; 
 ```text
 .
 ├── .github/workflows/deploy.yml  # GitHub Pages build/deploy workflow
-├── public/CNAME.example          # Placeholder custom-domain file
+├── public/CNAME                   # Active custom domain: kmmubin.me
+├── public/CNAME.example           # Reusable custom-domain placeholder
 ├── public/KM MUBIN photo.jpeg    # Hero portrait asset
 ├── src/
 │   ├── components/
@@ -74,15 +75,17 @@ Install with `npm install`. Run with `npm run dev`; build with `npm run build`; 
 - Public repository created at `https://github.com/itzmubzy/itzmubzy.github.io`.
 - Portfolio source pushed to the `main` branch.
 - GitHub Actions build and Pages deployment completed successfully for commit `d7ccc96cf6e5b9f99279573c9e4adb6eea86b3cb`.
+- `public/CNAME` added for the chosen custom domain `kmmubin.me`.
+- Namecheap apex DNS verified locally against all four GitHub Pages A records.
 
 ### Pending / recommended next
 
-- Run `npm install` and `npm run build` in a network-enabled environment.
+- Set GitHub Pages **Source** to **GitHub Actions** so the compiled `dist` artifact is served instead of the repository source tree.
+- Enter `kmmubin.me` under GitHub Pages **Custom domain** and enable **Enforce HTTPS** after certificate verification.
+- Add the optional Namecheap `www` CNAME pointing to `itzmubzy.github.io` if the `www` hostname is desired.
 - Replace placeholder project case-study states with live repository/demo URLs when available.
-- Add a real `public/CNAME` only after choosing the domain.
 - If desired, add a downloadable CV link and project thumbnails under `public/`.
 - Confirm the published site URL after GitHub's Pages/CDN propagation completes.
-- Add a real `public/CNAME` and configure DNS after choosing the custom domain.
 - Consider adding automated accessibility checks (for example, Lighthouse or axe) before launch.
 
 ## How to add, edit, or remove content
@@ -118,13 +121,12 @@ Remove the whole object to remove a project card. The `ProjectCard` component wi
 ## Deploy and attach a custom domain
 
 1. Create a GitHub repository, commit the project, and push the `main` branch.
-2. In repository settings, set GitHub Pages source to **GitHub Actions**.
+2. In repository settings, set GitHub Pages source to **GitHub Actions**. This is required for the Vite build artifact to be served.
 3. The workflow at `.github/workflows/deploy.yml` runs `npm ci`, builds `dist`, and deploys it.
 4. The workflow automatically uses `/` for user-site repositories such as `username.github.io`, and `/<repository-name>/` for ordinary project sites. For a custom root domain, add a repository Actions variable named `VITE_BASE_PATH` with value `/`.
-5. Copy `public/CNAME.example` to `public/CNAME`, replace `yourdomain.com`, commit, and add the same domain in GitHub Pages settings.
-6. Configure the registrar's DNS records as shown by GitHub and wait for HTTPS.
-
-Do not commit a fake domain as `public/CNAME`; keep the `.example` placeholder until the real domain is known.
+5. The active custom domain is `kmmubin.me`, recorded in `public/CNAME`.
+6. In Namecheap, use the four GitHub Pages apex A records: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, and `185.199.111.153`.
+7. Add `kmmubin.me` in GitHub Pages **Custom domain**, wait for HTTPS verification, then enable **Enforce HTTPS**. Add `www` -> `itzmubzy.github.io` as an optional Namecheap CNAME if needed.
 
 ### Visibility rule
 
@@ -210,3 +212,9 @@ The UI currently imports `portfolio.config.json` as a local content contract. Pr
 
 - Fixed the Pages workflow so `itzmubzy.github.io` builds with root asset paths (`/`) instead of a project-site subpath.
 - Kept repository subpath behavior for ordinary project-site repositories.
+
+### 2026-09-29 - Custom domain preparation
+
+- Added `public/CNAME` with `kmmubin.me`.
+- Documented the Namecheap A records and optional `www` CNAME.
+- Recorded the remaining GitHub Pages settings: Source = GitHub Actions, Custom domain = `kmmubin.me`, then Enforce HTTPS after verification.
