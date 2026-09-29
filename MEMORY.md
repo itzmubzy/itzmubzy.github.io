@@ -190,3 +190,8 @@ The UI currently imports `portfolio.config.json` as a local content contract. Pr
 
 - Documented the GitHub Free versus Pro/Team/Enterprise Pages limitation.
 - Documented the public-repository recommendation and private-source/public-site option.
+
+### 2026-09-29 - Public repository hygiene
+
+- Excluded the local resume PDF and duplicate root portrait from the Git-tracked deployment payload because the repository is public.
+- Kept the intended hero portrait at `public/KM MUBIN photo.jpeg` for the website.
