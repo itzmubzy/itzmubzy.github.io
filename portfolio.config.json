@@ -1,0 +1,172 @@
+{
+  "site": {
+    "name": "KM Mubin",
+    "shortName": "Mubin",
+    "role": "Data Science Student",
+    "eyebrow": "Portfolio / 2026",
+    "tagline": "Turning messy data into clear, useful decisions.",
+    "summary": "I am a Data Science student who enjoys asking better questions, finding the signal in real-world data, and translating analysis into decisions people can act on.",
+    "location": "Dhaka, Bangladesh",
+    "availability": "Open to data science internships",
+    "email": "kmmubin1234@gmail.com",
+    "phone": "+880 1322 739367",
+    "socials": [
+      {
+        "label": "LinkedIn",
+        "handle": "in/kmmubin",
+        "url": "https://linkedin.com/in/kmmubin"
+      },
+      {
+        "label": "GitHub",
+        "handle": "@itzmubzy",
+        "url": "https://github.com/itzmubzy"
+      }
+    ]
+  },
+  "navigation": [
+    { "label": "About", "href": "#about" },
+    { "label": "Work", "href": "#projects" },
+    { "label": "Skills", "href": "#skills" },
+    { "label": "Experience", "href": "#experience" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "about": {
+    "sectionLabel": "01 / About",
+    "title": "Curious by default. Rigorous when it matters.",
+    "paragraphs": [
+      "I am studying Data Science with a focus on the practical end of the discipline: collecting imperfect data, understanding what it can and cannot say, and turning the result into a clear story.",
+      "My current work sits between exploratory data analysis, statistical reasoning, and beginner-friendly machine learning. I enjoy projects where the dataset is connected to a real question - from crop yield and climate variability to business performance and public awareness.",
+      "Outside the notebook, I like making technical ideas understandable, contributing to student communities, and learning by building in public."
+    ],
+    "stats": [
+      { "value": "3.84", "label": "Current CGPA" },
+      { "value": "2028", "label": "Expected graduation" },
+      { "value": "03", "label": "Featured projects" }
+    ]
+  },
+  "focusAreas": [
+    {
+      "number": "01",
+      "title": "Exploratory analysis",
+      "description": "Finding patterns, anomalies, and useful questions before the model enters the room.",
+      "tags": ["Pandas", "EDA", "Data cleaning"]
+    },
+    {
+      "number": "02",
+      "title": "Statistical thinking",
+      "description": "Using appropriate tests, assumptions, and visual evidence to make conclusions more trustworthy.",
+      "tags": ["Statistics", "Statsmodels", "Research"]
+    },
+    {
+      "number": "03",
+      "title": "Predictive modeling",
+      "description": "Building approachable machine learning workflows that are measurable, explainable, and useful.",
+      "tags": ["Scikit-learn", "Feature work", "Evaluation"]
+    },
+    {
+      "number": "04",
+      "title": "Communicating insight",
+      "description": "Turning technical findings into visuals and language that help a team decide what to do next.",
+      "tags": ["Matplotlib", "Power BI", "Storytelling"]
+    }
+  ],
+  "projects": [
+    {
+      "number": "PJ/01",
+      "title": "Climate impact on AUS rice yield",
+      "category": "Research / Machine Learning",
+      "period": "Dec 2025 - Present",
+      "description": "A research-led analysis of how climate variability affects AUS rice yield in Bangladesh across long-term historical data from 1969 to 2023.",
+      "details": [
+        "Integrated and cleaned long-term climate and agricultural data.",
+        "Combined econometric modeling with a Random Forest workflow.",
+        "Used satellite data to improve model performance and interpret feature importance."
+      ],
+      "skills": ["Python", "Pandas", "NumPy", "Scikit-learn", "Statistical modeling"],
+      "accent": "green"
+    },
+    {
+      "number": "PJ/02",
+      "title": "Air pollution awareness study",
+      "category": "Research / Statistical Analysis",
+      "period": "Feb 2026 - Present",
+      "description": "A KAP survey analysis exploring the relationship between knowledge, attitude, and protective behavior around air pollution.",
+      "details": [
+        "Prepared and explored survey data with reproducible Python notebooks.",
+        "Applied statistical modeling to test relationships between behavioral factors.",
+        "Designed visuals that make the research findings easier to discuss."
+      ],
+      "skills": ["Python", "Pandas", "Statsmodels", "EDA", "Data visualization"],
+      "accent": "blue"
+    },
+    {
+      "number": "PJ/03",
+      "title": "Spotlight Attires insights",
+      "category": "Business Analytics / EDA",
+      "period": "Mar 2026 - Present",
+      "description": "A real-world business analysis project focused on turning company data into practical insights for better decisions.",
+      "details": [
+        "Structured the analysis around business questions rather than isolated charts.",
+        "Explored performance patterns, trends, and opportunities in company data.",
+        "Built a clear analysis narrative with recommendations for stakeholders."
+      ],
+      "skills": ["Python", "Pandas", "EDA", "Business analytics", "Visualization"],
+      "accent": "orange"
+    }
+  ],
+  "skills": [
+    {
+      "title": "Programming",
+      "items": ["Python", "SQL", "C++", "Java", "C#", "R (basic)"]
+    },
+    {
+      "title": "Data science",
+      "items": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn", "Statsmodels"]
+    },
+    {
+      "title": "Tools",
+      "items": ["Jupyter", "Google Colab", "Excel", "Power BI", "Git", "VS Code", "Kaggle"]
+    },
+    {
+      "title": "Ways of working",
+      "items": ["Data cleaning", "EDA", "Statistical analysis", "Visualization", "Communication", "Collaboration"]
+    }
+  ],
+  "experience": [
+    {
+      "period": "Mar 2026 - Present",
+      "role": "Exchange Participant Manager",
+      "organization": "AIESEC in Bangladesh",
+      "description": "Recently joined the Outgoing Global Exchange team, supporting participant management and communication processes."
+    },
+    {
+      "period": "Apr 2025 - Present",
+      "role": "Sub Executive, Marketing & Design",
+      "organization": "AgeSense Initiative",
+      "description": "Designed promotional content, contributed to branding and social media strategy, and supported outreach campaigns."
+    },
+    {
+      "period": "Jan 2025 - Present",
+      "role": "General Member",
+      "organization": "AIUB Computer Club",
+      "description": "Volunteered in the AIUB Cyber Gaming Fest and supported event coordination, participant management, and operations."
+    },
+    {
+      "period": "2025 - Present",
+      "role": "General Member",
+      "organization": "ACES / ESAB AIUB Unit",
+      "description": "Participated in engineering, sustainability, and community activities through workshops, awareness campaigns, and peer learning."
+    }
+  ],
+  "contact": {
+    "sectionLabel": "05 / Contact",
+    "title": "Have a question, idea, or dataset?",
+    "description": "I am open to data science internships, collaborative research, and conversations about turning real-world data into useful insight.",
+    "closing": "Let's make the next analysis count."
+  },
+  "footer": {
+    "copyright": "KM Mubin",
+    "note": "Built with curiosity, coffee, and clean notebooks."
+  }
+}
+
