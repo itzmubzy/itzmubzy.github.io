@@ -3,6 +3,7 @@ import portfolio from '../portfolio.config.json';
 import SectionHeader from './components/SectionHeader.jsx';
 import ThemeToggle from './components/ThemeToggle.jsx';
 import ProjectCard from './components/ProjectCard.jsx';
+import { getGitHubProjects } from './data/githubRepos.js';
 
 function ArrowIcon() {
   return (
@@ -21,6 +22,10 @@ function ExternalIcon() {
   );
 }
 
+function ProjectSyncIcon() {
+  return <span className="project-sync-icon" aria-hidden="true" />;
+}
+
 function MenuIcon({ open }) {
   return (
     <span className={`menu-icon ${open ? 'menu-icon-open' : ''}`} aria-hidden="true">
@@ -33,7 +38,9 @@ function MenuIcon({ open }) {
 function App() {
   const [theme, setTheme] = useState(() => document.documentElement.dataset.theme || 'light');
   const [menuOpen, setMenuOpen] = useState(false);
-  const { site, navigation, about, focusAreas, projects, skills, experience, contact, footer } = portfolio;
+  const { site, github, navigation, about, focusAreas, projects, skills, experience, contact, footer } = portfolio;
+  const [githubProjects, setGithubProjects] = useState([]);
+  const [githubStatus, setGithubStatus] = useState(github?.enabled ? 'loading' : 'disabled');
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
@@ -41,8 +48,38 @@ function App() {
     document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#0d0e0c' : '#f5f5f1');
   }, [theme]);
 
+  useEffect(() => {
+    if (!github?.enabled) return undefined;
+
+    let cancelled = false;
+    setGithubStatus('loading');
+
+    getGitHubProjects(github)
+      .then((repositories) => {
+        if (cancelled) return;
+        setGithubProjects(repositories);
+        setGithubStatus(repositories.length ? 'ready' : 'empty');
+      })
+      .catch(() => {
+        if (cancelled) return;
+        setGithubStatus('error');
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [github]);
+
   const toggleTheme = () => setTheme((current) => (current === 'dark' ? 'light' : 'dark'));
   const closeMenu = () => setMenuOpen(false);
+  const allProjects = [...projects, ...githubProjects];
+  const githubStatusLabel = {
+    loading: 'Syncing public GitHub repositories',
+    ready: `${githubProjects.length} public repositories synced from GitHub`,
+    empty: 'No public repositories found yet',
+    error: 'GitHub sync unavailable - showing featured work',
+    disabled: 'GitHub sync is disabled in portfolio.config.json',
+  }[githubStatus];
 
   return (
     <div className="site-shell min-h-screen">
@@ -166,10 +203,16 @@ function App() {
             <SectionHeader
               label="03 / Selected work"
               title="Projects with a real question behind them."
-              description="A growing body of work across business analytics, public-awareness research, and climate-informed modeling."
+              description="Featured case studies plus every public repository from my GitHub profile, updated automatically."
             />
+            <div className="projects-toolbar" aria-live="polite">
+              <span className="project-sync-status"><ProjectSyncIcon /> {githubStatusLabel}</span>
+              <a className="text-link" href={github.profileUrl} target="_blank" rel="noreferrer">
+                View GitHub profile <ExternalIcon />
+              </a>
+            </div>
             <div className="project-grid">
-              {projects.map((project) => <ProjectCard key={project.number} project={project} />)}
+              {allProjects.map((project) => <ProjectCard key={project.number} project={project} />)}
             </div>
           </div>
         </section>
