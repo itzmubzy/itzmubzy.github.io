@@ -39,6 +39,7 @@
   "navigation": [
     { "label": "About", "href": "#about" },
     { "label": "Education", "href": "#education" },
+    { "label": "Inquiry", "href": "#inquiry" },
     { "label": "Work", "href": "#projects" },
     { "label": "Skills", "href": "#skills" },
     { "label": "Experience", "href": "#experience" },
@@ -48,13 +49,25 @@
     "sectionLabel": "01 / About",
     "title": "Data, models, and questions that matter.",
     "paragraphs": [
-      "I am studying Data Science at American International University-Bangladesh with a practical focus: collecting imperfect data, understanding what it can and cannot say, and turning the result into a clear story.",
-      "My strongest interests sit at the intersection of machine learning, climate and agricultural analytics, Bengali and multilingual NLP, and data visualization. I enjoy projects where a model is connected to a real question - from rice yield and climate extremes to air quality and public awareness.",
-      "Outside the notebook, I build data-driven applications, contribute to student communities, and learn by making technical ideas understandable."
+      "I’m an eighth-semester Data Science student interested in AI, research, and building practical, accessible technology."
     ],
-    "stats": [
-      { "value": "148", "label": "BSc program credits" },
-      { "value": "05", "label": "Research directions" }
+    "highlights": [
+      {
+        "title": "Leadership & growth",
+        "description": "University clubs, the Duke of Edinburgh’s programme, and AIESEC have strengthened my leadership, teamwork, and communication skills."
+      },
+      {
+        "title": "Research & persistence",
+        "description": "Competitions and research have taught me to keep learning, improving, and staying committed despite setbacks."
+      },
+      {
+        "title": "Interests",
+        "description": "Machine learning, NLP, LLMs, information retrieval, interpretability, multilingual AI, and AI for social good."
+      },
+      {
+        "title": "Hands-on mindset",
+        "description": "I enjoy experimenting with new AI models, automation, data analysis, visualization, and building usable systems."
+      }
     ]
   },
   "education": [
@@ -70,6 +83,28 @@
       "period": "Mar 2021 – Aug 2023",
       "url": "https://www.kgcsc.edu.bd/"
     }
+  ],
+  "inquiryAreas": [
+    "Machine Learning & Statistical Analysis",
+    "Natural Language Processing",
+    "Information Retrieval",
+    "Large Language Models",
+    "LLM Evaluation & Benchmarking",
+    "Local AI & Open-Weight Models",
+    "AI Automation & Agentic Workflows",
+    "Code Intelligence & Retrieval",
+    "Language Tooling & Compilers",
+    "Information Extraction",
+    "Low-Resource Language Technology",
+    "Multilingual Benchmarking",
+    "Legal AI & Computational Law",
+    "ML Interpretability & Explainable AI",
+    "Causal Inference",
+    "Computational Mathematics",
+    "Responsible AI",
+    "Accessible & Affordable AI",
+    "AI for Social Good",
+    "Crime Intelligence Systems"
   ],
   "focusAreas": [
     {
@@ -213,7 +248,7 @@
     }
   ],
   "contact": {
-    "sectionLabel": "07 / Contact",
+    "sectionLabel": "08 / Contact",
     "title": "Have a question, idea, or dataset?",
     "description": "I am open to data science internships, collaborative research, and conversations about turning real-world data into useful insight.",
     "closing": "Let's make the next analysis count."

@@ -650,6 +650,64 @@ button {
   color: var(--ink);
 }
 
+.glance-card {
+  padding: 24px 0;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line);
+}
+
+.glance-list {
+  display: grid;
+  gap: 18px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.glance-list li {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.glance-list strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.inquiry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line-strong);
+  border-left: 1px solid var(--line);
+}
+
+.inquiry-item {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  min-height: 96px;
+  padding: 20px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.inquiry-item > span {
+  color: var(--accent-deep);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.inquiry-item h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
 .education-list {
   border-top: 1px solid var(--line-strong);
 }
@@ -1446,7 +1504,8 @@ button {
   }
 
   .focus-grid,
-  .skills-grid {
+  .skills-grid,
+  .inquiry-grid {
     grid-template-columns: 1fr;
   }
 

@@ -38,7 +38,7 @@ function MenuIcon({ open }) {
 function App() {
   const [theme, setTheme] = useState(() => document.documentElement.dataset.theme || 'light');
   const [menuOpen, setMenuOpen] = useState(false);
-  const { site, github, navigation, about, education, focusAreas, projects, skills, experience, contact, footer } = portfolio;
+  const { site, github, navigation, about, education, inquiryAreas, focusAreas, projects, skills, experience, contact, footer } = portfolio;
   const [githubProjects, setGithubProjects] = useState([]);
   const [githubStatus, setGithubStatus] = useState(github?.enabled ? 'loading' : 'disabled');
 
@@ -162,17 +162,15 @@ function App() {
               <div className="about-copy">
                 {about.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
               </div>
-              <aside className="stats-card" aria-label="Portfolio stats">
+              <aside className="glance-card" aria-label="At a glance">
                 <p className="mini-label">At a glance</p>
-                <div className="stats-list">
-                  {about.stats.map((stat) => (
-                    <div className="stat-item" key={stat.label}>
-                      <strong>{stat.value}</strong>
-                      <span>{stat.label}</span>
-                    </div>
+                <ul className="glance-list">
+                  {about.highlights.map((highlight) => (
+                    <li key={highlight.title}>
+                      <strong>{highlight.title}:</strong> {highlight.description}
+                    </li>
                   ))}
-                </div>
-                <div className="stats-card-note"><span className="status-dot" /> Always learning, always testing</div>
+                </ul>
               </aside>
             </div>
           </div>
@@ -201,10 +199,28 @@ function App() {
           </div>
         </section>
 
+        <section id="inquiry" className="section-shell section-border">
+          <div className="container">
+            <SectionHeader
+              label="03 / Areas of inquiry"
+              title="Questions I keep returning to."
+              description="Topics I actively read about, experiment with, and explore through research."
+            />
+            <div className="inquiry-grid">
+              {inquiryAreas.map((area, index) => (
+                <div className="inquiry-item" key={area}>
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <h3>{area}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="focus" className="section-shell section-tint">
           <div className="container">
             <SectionHeader
-              label="03 / What I do"
+              label="04 / What I do"
               title="Four ways I like to move a question forward."
               description="The work usually starts with ambiguity. These are the habits I use to turn it into something useful."
             />
@@ -224,7 +240,7 @@ function App() {
         <section id="projects" className="section-shell section-border">
           <div className="container">
             <SectionHeader
-              label="04 / Selected work"
+              label="05 / Selected work"
               title="Projects with a real question behind them."
               description="Featured case studies plus every public repository from my GitHub profile, updated automatically."
             />
@@ -243,7 +259,7 @@ function App() {
         <section id="skills" className="section-shell section-dark">
           <div className="container">
             <SectionHeader
-              label="05 / Toolkit"
+              label="06 / Toolkit"
               title="Enough tools to stay curious."
               description="A practical toolkit for exploring, modeling, visualizing, and communicating data."
             />
@@ -267,7 +283,7 @@ function App() {
         <section id="experience" className="section-shell section-border">
           <div className="container">
             <SectionHeader
-              label="06 / Experience"
+              label="07 / Experience"
               title="Learning happens with people, too."
               description="Student communities and volunteer work have taught me how to communicate, take ownership, and make a team more capable."
             />
