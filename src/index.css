@@ -1159,6 +1159,11 @@ button {
   text-transform: uppercase;
 }
 
+.experience-org-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .experience-location {
   margin-left: 10px;
   color: var(--muted);
@@ -1195,6 +1200,51 @@ button {
 .experience-item:hover > svg {
   color: var(--ink);
   transform: translateX(4px);
+}
+
+.vision-section .section-heading h2 {
+  max-width: 900px;
+}
+
+.vision-section .section-description {
+  max-width: 850px;
+  color: #d5dccd;
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 3vw, 2.35rem);
+  line-height: 1.2;
+}
+
+.faq-list {
+  border-top: 1px solid var(--line-strong);
+}
+
+.faq-item {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 28px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-index {
+  color: var(--accent-deep);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.faq-item h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.faq-item p {
+  max-width: 720px;
+  margin: 12px 0 0;
+  color: var(--muted);
 }
 
 .contact-section {
@@ -1555,6 +1605,11 @@ button {
 
   .education-item {
     grid-template-columns: 36px 1fr 20px;
+    gap: 12px;
+  }
+
+  .faq-item {
+    grid-template-columns: 36px 1fr;
     gap: 12px;
   }
 

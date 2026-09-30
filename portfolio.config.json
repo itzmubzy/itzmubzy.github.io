@@ -43,6 +43,8 @@
     { "label": "Work", "href": "#projects" },
     { "label": "Skills", "href": "#skills" },
     { "label": "Experience", "href": "#experience" },
+    { "label": "Vision", "href": "#vision" },
+    { "label": "FAQ", "href": "#faq" },
     { "label": "Contact", "href": "#contact" }
   ],
   "about": {
@@ -114,27 +116,27 @@
   "focusAreas": [
     {
       "number": "01",
-      "title": "Climate & agriculture",
-      "description": "Studying how climate variability and extreme events affect agricultural outcomes in Bangladesh.",
-      "tags": ["ERA5-Land", "GEE", "Feature engineering"]
+      "title": "Seek Knowledge from Experts",
+      "description": "Islam encourages asking those with knowledge when we are unsure, as stated in the Quran: “So ask the people of the message if you do not know” (21:7). This keeps answers grounded in evidence rather than opinion.",
+      "tags": ["Evidence", "Quran 21:7"]
     },
     {
       "number": "02",
-      "title": "Machine learning",
-      "description": "Building measurable, explainable workflows for prediction, classification, and real-world decisions.",
-      "tags": ["Scikit-learn", "PyTorch", "Model evaluation"]
+      "title": "Ask for Lived Experience",
+      "description": "Before diving into complex theology, I use open questions such as “Can you share a story that explains what this teaching means to you?” Stories build connection and clarify context through personal experience.",
+      "tags": ["Open questions", "Context"]
     },
     {
       "number": "03",
-      "title": "Bengali & multilingual NLP",
-      "description": "Exploring language, code-switching, romanization, and bias across Bengali and English text.",
-      "tags": ["NLP", "Bias research", "Multilingual"]
+      "title": "Practice Critical Thinking and Mercy",
+      "description": "Instead of issuing judgments, I try to understand the specific circumstances and capacities involved. Questions can guide people with mercy, making the “why” and “how” clearer and more compassionate.",
+      "tags": ["Critical thinking", "Mercy"]
     },
     {
       "number": "04",
-      "title": "Data applications",
-      "description": "Turning analysis into useful interfaces, production-minded APIs, and visual stories that connect technical work to business value.",
-      "tags": ["D3.js", "Flask", "APIs", "MLOps"]
+      "title": "Establish Consent and Focus on Basics",
+      "description": "I start with permission and curiosity. When I do not know an answer, I explain the core worldview first, say “I don’t know,” and commit to finding the answer rather than guessing.",
+      "tags": ["Consent", "Curiosity", "Humility"]
     }
   ],
   "projects": [
@@ -179,6 +181,22 @@
       ],
       "skills": ["Python", "Pandas", "EDA", "Business analytics", "Visualization"],
       "accent": "orange"
+    },
+    {
+      "number": "PJ/04",
+      "title": "AgeSense Initiative website launch",
+      "category": "IT / Community Impact",
+      "period": "Mar 2026 - Present",
+      "description": "Helped AgeSense Initiative bring its public website online and strengthen its digital presence as a youth-led nonprofit supporting elderly individuals across Bangladesh.",
+      "details": [
+        "Supported the organization’s transition to an online public presence.",
+        "Helped communicate AgeSense Initiative’s mission, programs, and commitment to elderly care.",
+        "Contributed technical support to make the organization more accessible to supporters, volunteers, and partners."
+      ],
+      "skills": ["Web development", "IT support", "Nonprofit technology", "Accessibility"],
+      "url": "https://agesense.org/",
+      "cta": "Visit AgeSense Initiative",
+      "accent": "green"
     }
   ],
   "skills": [
@@ -234,9 +252,21 @@
       ]
     },
     {
+      "period": "Mar 2026 - Present",
+      "role": "IT Team Member",
+      "organization": "AgeSense Initiative",
+      "url": "https://agesense.org/",
+      "description": "Helped AgeSense Initiative bring its public website online and supported the organization’s digital presence.",
+      "details": [
+        "Supported the launch of an online presence for a youth-led nonprofit dedicated to improving the quality of life of elderly individuals across Bangladesh.",
+        "Helped present the organization’s mission, programs, partnerships, and long-term commitment to advocacy and service delivery online."
+      ]
+    },
+    {
       "period": "Apr 2025 - Present",
       "role": "Sub Executive, Marketing & Design",
       "organization": "AgeSense Initiative",
+      "url": "https://agesense.org/",
       "description": "Designed promotional content, contributed to branding and social media strategy, and supported outreach campaigns."
     },
     {
@@ -252,8 +282,40 @@
       "description": "Participated in engineering, sustainability, and community activities through workshops, awareness campaigns, and peer learning."
     }
   ],
+  "vision": {
+    "sectionLabel": "11 / Vision",
+    "title": "What I’m building toward.",
+    "description": "To build impactful AI systems, contribute meaningful research to the NLP community, and develop technologies that help low-resource languages and human ecosystems gain stronger representation in modern AI — while making software development itself more intelligent and efficient."
+  },
+  "faq": {
+    "sectionLabel": "12 / FAQ",
+    "title": "Questions, answered.",
+    "description": "The short version of who I am, what I work on, and how to reach me.",
+    "items": [
+      {
+        "question": "Who is K M Mubin?",
+        "answer": "K M Mubin is a Data Science student and aspiring researcher from Dhaka, Bangladesh. He explores AI, NLP, LLMs, information retrieval, multilingual technology, and practical systems that create meaningful real-world impact."
+      },
+      {
+        "question": "What does K M Mubin work on?",
+        "answer": "Mubin works on data analysis, machine learning, NLP, LLM evaluation, information retrieval, automation, visualization, and accessible technology. His projects connect research questions with usable applications."
+      },
+      {
+        "question": "What are K M Mubin’s research interests?",
+        "answer": "His research interests include low-resource language technology, multilingual benchmarking, ML interpretability, responsible AI, causal inference, AI for social good, and computational approaches to language and information."
+      },
+      {
+        "question": "Is K M Mubin open to research collaboration?",
+        "answer": "Yes. Mubin is open to research collaborations, internships, student projects, and conversations about thoughtful, reproducible, and socially useful AI."
+      },
+      {
+        "question": "How can I contact K M Mubin?",
+        "answer": "You can reach Mubin by email at kmmubin1234@gmail.com or through LinkedIn and GitHub in the Contact section."
+      }
+    ]
+  },
   "contact": {
-    "sectionLabel": "08 / Contact",
+    "sectionLabel": "13 / Contact",
     "title": "Have a question, idea, or dataset?",
     "description": "I am open to data science internships, collaborative research, and conversations about turning real-world data into useful insight.",
     "closing": "Let's make the next analysis count."

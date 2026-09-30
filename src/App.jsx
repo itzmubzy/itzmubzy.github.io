@@ -38,7 +38,7 @@ function MenuIcon({ open }) {
 function App() {
   const [theme, setTheme] = useState(() => document.documentElement.dataset.theme || 'light');
   const [menuOpen, setMenuOpen] = useState(false);
-  const { site, github, navigation, about, education, inquiryAreas, focusAreas, projects, skills, experience, contact, footer } = portfolio;
+  const { site, github, navigation, about, education, inquiryAreas, focusAreas, projects, skills, experience, contact, vision, faq, footer } = portfolio;
   const [githubProjects, setGithubProjects] = useState([]);
   const [githubStatus, setGithubStatus] = useState(github?.enabled ? 'loading' : 'disabled');
 
@@ -221,8 +221,8 @@ function App() {
           <div className="container">
             <SectionHeader
               label="04 / What I do"
-              title="Four ways I like to move a question forward."
-              description="The work usually starts with ambiguity. These are the habits I use to turn it into something useful."
+              title="Four principles I use to move a question forward."
+              description="The work usually starts with uncertainty. These principles help me seek evidence, understand context, and respond with care."
             />
             <div className="focus-grid">
               {focusAreas.map((area) => (
@@ -295,7 +295,7 @@ function App() {
                   <div className="experience-main">
                     <h3>{item.role}</h3>
                     <p className="experience-org">
-                      {item.organization}
+                      {item.url ? <a className="experience-org-link" href={item.url} target="_blank" rel="noreferrer">{item.organization}</a> : item.organization}
                       {item.location && <span className="experience-location">{item.location}</span>}
                     </p>
                     <p>{item.description}</p>
@@ -306,6 +306,29 @@ function App() {
                     )}
                   </div>
                   <ArrowIcon />
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="vision" className="section-shell section-dark vision-section">
+          <div className="container">
+            <SectionHeader label={vision.sectionLabel} title={vision.title} description={vision.description} />
+          </div>
+        </section>
+
+        <section id="faq" className="section-shell section-border">
+          <div className="container">
+            <SectionHeader label={faq.sectionLabel} title={faq.title} description={faq.description} />
+            <div className="faq-list">
+              {faq.items.map((item, index) => (
+                <article className="faq-item" key={item.question}>
+                  <div className="faq-index">0{index + 1}</div>
+                  <div>
+                    <h3>{item.question}</h3>
+                    <p>{item.answer}</p>
+                  </div>
                 </article>
               ))}
             </div>
