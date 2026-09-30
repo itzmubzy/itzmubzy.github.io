@@ -543,14 +543,14 @@ button {
   gap: 7px;
   width: 168px;
   padding: 14px 16px;
-  border: 1px solid rgba(21, 22, 18, 0.25);
-  background: color-mix(in srgb, var(--surface) 78%, transparent);
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
   box-shadow: var(--shadow);
   backdrop-filter: blur(10px);
 }
 
 .hero-data-card strong {
-  color: #151612;
+  color: var(--ink);
   font-size: 12px;
   font-weight: 600;
   line-height: 1.35;
@@ -569,7 +569,7 @@ button {
 }
 
 .data-label {
-  color: rgba(21, 22, 18, 0.62);
+  color: var(--muted);
 }
 
 .visual-caption {
@@ -648,6 +648,70 @@ button {
 
 .about-copy p:first-child {
   color: var(--ink);
+}
+
+.education-list {
+  border-top: 1px solid var(--line-strong);
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 20px;
+  gap: 28px;
+  align-items: start;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+  transition: padding 180ms ease;
+}
+
+.education-item:hover,
+.education-item:focus-visible {
+  padding-right: 7px;
+  padding-left: 7px;
+}
+
+.education-index {
+  color: var(--accent-deep);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.education-period {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.education-main h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.education-main > p:last-child {
+  margin: 9px 0 0;
+  color: var(--accent-deep);
+  font-family: var(--mono);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.education-item > svg {
+  margin-top: 4px;
+  color: var(--muted);
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.education-item:hover > svg,
+.education-item:focus-visible > svg {
+  color: var(--ink);
+  transform: translateX(4px);
 }
 
 .stats-card {
@@ -1426,6 +1490,11 @@ button {
   }
 
   .experience-item {
+    grid-template-columns: 36px 1fr 20px;
+    gap: 12px;
+  }
+
+  .education-item {
     grid-template-columns: 36px 1fr 20px;
     gap: 12px;
   }

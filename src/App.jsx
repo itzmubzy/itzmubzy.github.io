@@ -38,7 +38,7 @@ function MenuIcon({ open }) {
 function App() {
   const [theme, setTheme] = useState(() => document.documentElement.dataset.theme || 'light');
   const [menuOpen, setMenuOpen] = useState(false);
-  const { site, github, navigation, about, focusAreas, projects, skills, experience, contact, footer } = portfolio;
+  const { site, github, navigation, about, education, focusAreas, projects, skills, experience, contact, footer } = portfolio;
   const [githubProjects, setGithubProjects] = useState([]);
   const [githubStatus, setGithubStatus] = useState(github?.enabled ? 'loading' : 'disabled');
 
@@ -178,10 +178,33 @@ function App() {
           </div>
         </section>
 
+        <section id="education" className="section-shell section-tint">
+          <div className="container">
+            <SectionHeader
+              label="02 / Education"
+              title="Learning the foundations behind useful data work."
+              description="My academic path combines a current degree in Data Science with a completed higher-secondary education."
+            />
+            <div className="education-list">
+              {education.map((item, index) => (
+                <a className="education-item" key={item.institution} href={item.url} target="_blank" rel="noreferrer">
+                  <div className="education-index">0{index + 1}</div>
+                  <div className="education-main">
+                    <p className="education-period">{item.period}</p>
+                    <h3>{item.institution}</h3>
+                    <p>{item.program}</p>
+                  </div>
+                  <ArrowIcon />
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="focus" className="section-shell section-tint">
           <div className="container">
             <SectionHeader
-              label="02 / What I do"
+              label="03 / What I do"
               title="Four ways I like to move a question forward."
               description="The work usually starts with ambiguity. These are the habits I use to turn it into something useful."
             />
@@ -201,7 +224,7 @@ function App() {
         <section id="projects" className="section-shell section-border">
           <div className="container">
             <SectionHeader
-              label="03 / Selected work"
+              label="04 / Selected work"
               title="Projects with a real question behind them."
               description="Featured case studies plus every public repository from my GitHub profile, updated automatically."
             />
@@ -220,7 +243,7 @@ function App() {
         <section id="skills" className="section-shell section-dark">
           <div className="container">
             <SectionHeader
-              label="04 / Toolkit"
+              label="05 / Toolkit"
               title="Enough tools to stay curious."
               description="A practical toolkit for exploring, modeling, visualizing, and communicating data."
             />
@@ -244,7 +267,7 @@ function App() {
         <section id="experience" className="section-shell section-border">
           <div className="container">
             <SectionHeader
-              label="05 / Experience"
+              label="06 / Experience"
               title="Learning happens with people, too."
               description="Student communities and volunteer work have taught me how to communicate, take ownership, and make a team more capable."
             />

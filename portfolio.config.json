@@ -38,6 +38,7 @@
   },
   "navigation": [
     { "label": "About", "href": "#about" },
+    { "label": "Education", "href": "#education" },
     { "label": "Work", "href": "#projects" },
     { "label": "Skills", "href": "#skills" },
     { "label": "Experience", "href": "#experience" },
@@ -56,6 +57,20 @@
       { "value": "05", "label": "Research directions" }
     ]
   },
+  "education": [
+    {
+      "institution": "American International University-Bangladesh",
+      "program": "BSc in Data Science",
+      "period": "Jul 2024 – Dec 2027 (Expected)",
+      "url": "https://www.linkedin.com/in/kmmubin/details/education/edit/forms/1196762314/"
+    },
+    {
+      "institution": "Khilgaon Government College",
+      "program": "HSC",
+      "period": "Mar 2021 – Aug 2023",
+      "url": "https://www.linkedin.com/in/kmmubin/details/education/edit/forms/792414783/"
+    }
+  ],
   "focusAreas": [
     {
       "number": "01",
@@ -198,7 +213,7 @@
     }
   ],
   "contact": {
-    "sectionLabel": "05 / Contact",
+    "sectionLabel": "07 / Contact",
     "title": "Have a question, idea, or dataset?",
     "description": "I am open to data science internships, collaborative research, and conversations about turning real-world data into useful insight.",
     "closing": "Let's make the next analysis count."
